@@ -47,12 +47,12 @@ def remove_suffix_ness(word):
     print("last_last_letter is:" + last_last_letter)
 
     def is_vowel(letter):
-        return (letter == 'a') or (letter == 'e') or (letter == 'i') or (letter == 'o') or (letter == 'u')
+        return letter in ['a', 'e', 'i', 'o', 'u']
 
     if last_letter == 'i' and not is_vowel(last_last_letter) :
         return word[0:-5] + 'y'
-    else:
-        return word[0:-4]
+    
+    return word[0:-4]
 
 
 def adjective_to_verb(sentence, index):
@@ -71,15 +71,3 @@ def adjective_to_verb(sentence, index):
     words = sentence[:-1].split(" ")
 
     return words[index] + 'en'
-
-    pass
-
-# words = ['en', 'circle', 'fold', 'close', 'joy', 'lighten', 'tangle', 'able', 'code', 'culture']
-# print(make_word_groups(words))
-
-# str = "helloness"
-# str1 = "heaviness"
-# str2 = "sadness"
-# print(remove_suffix_ness(str))
-# print(remove_suffix_ness(str1))
-# print(remove_suffix_ness(str2))
